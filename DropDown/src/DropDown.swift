@@ -1075,9 +1075,9 @@ extension DropDown: UITableViewDataSource, UITableViewDelegate {
 		
 		cell.optionLabel.textColor = textColor
 		cell.optionLabel.font = textFont
-		cell.selectedBackgroundColor = selectionBackgroundColor
-        cell.highlightTextColor = selectedTextColor
-        cell.normalTextColor = textColor
+		cell.selectedBackgroundColor = .clear
+        	cell.highlightTextColor = selectedTextColor
+        	cell.normalTextColor = textColor
 		
 		if let cellConfiguration = cellConfiguration {
 			cell.optionLabel.text = cellConfiguration(index, dataSource[index])
@@ -1129,9 +1129,6 @@ extension DropDown: UITableViewDataSource, UITableViewDelegate {
             // DropDown's from UIBarButtonItem are menus so we deselect the selected menu right after selection
             deselectRow(at: selectedRowIndex)
         }
-        
-        hide()
-    
 	}
 
 }
